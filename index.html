@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasa Akuntansi & Perpajakan Profesional - Yusa Haidir</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f8fafc; color: #334155; line-height: 1.6; }
+        
+        /* Hero Section */
+        header { background: linear-gradient(135deg, #0f172a, #1e3a8a); color: white; padding: 80px 20px; text-align: center; }
+        header h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 15px; letter-spacing: -0.5px; }
+        header p { font-size: 1.3rem; opacity: 0.9; max-width: 700px; margin: 0 auto 25px auto; }
+        
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        
+        /* Section styling */
+        .section-title { text-align: center; color: #1e3a8a; margin-bottom: 35px; font-size: 2rem; position: relative; padding-bottom: 10px; }
+        .section-title::after { content: ''; width: 60px; height: 4px; background: #3b82f6; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+        
+        /* Service Cards */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 50px; }
+        .service-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03); border: 1px solid #e2e8f0; transition: transform 0.3s; }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-card h3 { color: #0f172a; margin-bottom: 15px; font-size: 1.3rem; display: flex; align-items: center; gap: 10px; }
+        .service-card ul { list-style-position: inside; color: #64748b; font-size: 0.95rem; }
+        .service-card li { margin-bottom: 8px; }
+
+        /* Profile & Experience Box */
+        .profile-container { display: grid; grid-template-columns: 1fr; gap: 30px; margin-bottom: 50px; }
+        @media (min-width: 768px) { .profile-container { grid-template-columns: 2fr 1fr; } }
+        .main-box { background: white; padding: 35px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+        .side-box { background: #1e3a8a; color: white; padding: 35px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        
+        .main-box p { margin-bottom: 15px; font-size: 1.05rem; }
+        .badge-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        .badge { background: #eff6ff; color: #1e3a8a; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+        
+        /* Contact Section */
+        .side-box h3 { border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; margin-bottom: 20px; }
+        .contact-list { list-style: none; }
+        .contact-list li { margin-bottom: 20px; font-size: 1rem; }
+        .contact-list strong { display: block; opacity: 0.7; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 3px; }
+        
+        .cta-btn { display: block; background: #3b82f6; color: white; text-align: center; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 25px; transition: background 0.3s; }
+        .cta-btn:hover { background: #2563eb; }
+        .whatsapp-btn { background: #10b981; }
+        .whatsapp-btn:hover { background: #059669; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Jasa Akuntansi, Pajak & Audit Perorangan</h1>
+    <p>Solusi pembukuan, kepatuhan pajak, dan pelaporan keuangan tepercaya untuk bisnis dan perusahaan Anda.</p>
+</header>
+
+<div class="container">
+    
+    <!-- Layanan Kami -->
+    <h2 class="section-title">Layanan yang Ditawarkan</h2>
+    <div class="services-grid">
+        
+        <div class="service-card">
+            <h3>📊 Akuntansi & Pembukuan</h3>
+            <ul>
+                <li>Penyusunan Laporan Keuangan Bulanan & Tahunan (P/L & B/S) sesuai standar IFRS [2].</li>
+                <li>Rekonsiliasi Bank bulanan dan jadwal neraca laporan [2].</li>
+                <li>Manajemen & Kontrol Inventaris/Stok barang [2].</li>
+                <li>Perhitungan Biaya Produksi (COGM & COGS) [2].</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <h3>⚖️ Kepatuhan & Pelaporan Pajak</h3>
+            <ul>
+                <li>Perhitungan dan pelaporan SPT bulanan serta tahunan [2].</li>
+                <li>Pengelolaan Dokumen PPN (VAT In & Out), PPh Badan (CIT), dan PPh Potput (WHT) [2].</li>
+                <li>Perhitungan Payroll, skala gaji, PPh Pasal 21, dan BPJS Karyawan [2].</li>
+                <li>Pelaporan formal DULN dan KPPK ke Bank Indonesia [2].</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <h3>🔍 Audit & Manajemen Internal</h3>
+            <ul>
+                <li>Jasa Audit laporan internal perorangan (Part-time Auditor) [2].</li>
+                <li>Evaluasi harga jual produk berdasarkan struktur biaya [2].</li>
+                <li>Penyusunan rencana anggaran tahunan (Annual Budget) & perkiraan kuartal [2].</li>
+                <li>Implementasi sistem penjaminan mutu dan kontrol internal perusahaan [2].</li>
+            </ul>
+        </div>
+        
+    </div>
+
+    <!-- Tentang Konsultan -->
+    <div class="profile-container">
+        
+        <div class="main-box">
+            <h2 style="color:#0f172a; margin-bottom: 20px;">Mengapa Memilih Kami?</h2>
+            <p>Dipimpin langsung oleh <strong>Yusa Haidir</strong>, seorang lulusan Manajemen Keuangan Universitas Mercu Buana Jakarta (Lulus 2003). Kami menawarkan pengalaman profesional lebih dari <strong>20 tahun</strong> di berbagai perusahaan multinasional besar (Jepang & Amerika) [2].</p>
+            <p>Berpengalaman menangani manajemen keuangan korporat di PT. Ishiguro Indonesia, PT. Meiwa Mold Indonesia, PT. Weatherford Indonesia (Perusahaan AS), dan PT. Kyowa Indonesia. Kami siap membantu mengoptimalkan stabilitas kondisi keuangan dan memastikan kepatuhan hukum bisnis Anda [2].</p>
+            
+            <div class="badge-container">
+                <span class="badge">Sertifikasi Brevet A & B (IAI)</span>
+                <span class="badge">Sertifikasi Akselerasi PPh Ps. 21</span>
+                <span class="badge">Pemahaman UU PPN Terbaru</span>
+                <span class="badge">Keahlian Sistem ERP (SAP/Oracle/Accurate)</span>
+                <span class="badge">Pemahaman Regulasi HSE & ISO</span>
+            </div>
+        </div>
+
+        <div class="side-box">
+            <h3>Konsultasi Sekarang</h3>
+            <ul class="contact-list">
+                <li>
+                    <strong>Nama Konsultan</strong>
+                    Yusa Haidir
+                </li>
+                <li>
+                    <strong>Nomor Handphone / WA</strong>
+                    08212656882
+                </li>
+                <li>
+                    <strong>Alamat Email</strong>
+                    yusahaidir@gmail.com
+                </li>
+                <li>
+                    <strong>Wilayah Operasional</strong>
+                    Cikarang, Bekasi, Jakarta, dan Sekitarnya
+                </li>
+            </ul>
+            <a href="https://wa.me" class="cta-btn whatsapp-btn" target="_blank">💬 Hubungi via WhatsApp</a>
+            <a href="mailto:yusahaidir@gmail.com" class="cta-btn">✉️ Kirim Email Penawaran</a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
