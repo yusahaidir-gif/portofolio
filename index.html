@@ -8,17 +8,14 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #f0f4f8; color: #1e293b; line-height: 1.6; }
         
-        /* Hero Section - Hitam & Biru Corporate */
+        /* Hero Section */
         header { background: linear-gradient(135deg, #0f172a, #1e3a8a); color: white; padding: 70px 20px; text-align: center; }
-        
         .profile-img-container { margin-bottom: 20px; }
         .profile-img { width: 140px; height: 140px; border-radius: 50%; border: 4px solid #3b82f6; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.3); background-color: #eaeaea; }
-        
         header h1 { font-size: 2.6rem; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.5px; }
         header p { font-size: 1.25rem; opacity: 0.9; max-width: 800px; margin: 0 auto; color: #93c5fd; }
         
         .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-        
         .section-title { text-align: center; color: #1e3a8a; margin-bottom: 35px; font-size: 2rem; position: relative; padding-bottom: 10px; font-weight: 700; }
         .section-title::after { content: ''; width: 60px; height: 4px; background: #3b82f6; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
         
@@ -30,7 +27,7 @@
         .service-card ul { list-style-position: inside; color: #475569; font-size: 0.95rem; }
         .service-card li { margin-bottom: 8px; list-style-type: square; }
 
-        /* Struktur Tarif Harga */
+        /* Tarif Harga */
         .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px; }
         .price-card { background: white; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; text-align: center; padding: 30px 20px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; }
         .price-card.featured { border: 2px solid #3b82f6; }
@@ -41,12 +38,18 @@
         .price-features { list-style: none; text-align: left; color: #475569; font-size: 0.9rem; margin-bottom: 25px; }
         .price-features li { margin-bottom: 10px; border-bottom: 1px dashed #f1f5f9; padding-bottom: 5px; }
 
-        /* Kombinasi Profil & Kontak */
+        /* Testimoni Section */
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 60px; }
+        .testimonial-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-left: 5px solid #10b981; }
+        .testimonial-text { font-style: italic; color: #475569; margin-bottom: 15px; font-size: 0.95rem; }
+        .testimonial-author { font-weight: bold; color: #0f172a; font-size: 0.95rem; }
+        .testimonial-company { color: #64748b; font-size: 0.85rem; }
+
+        /* Profil & Kontak */
         .profile-container { display: grid; grid-template-columns: 1fr; gap: 30px; margin-bottom: 50px; }
         @media (min-width: 768px) { .profile-container { grid-template-columns: 2fr 1fr; } }
         .main-box { background: white; padding: 35px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
         .side-box { background: #0f172a; color: white; padding: 35px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-        
         .main-box p { margin-bottom: 15px; font-size: 1.05rem; }
         .badge-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
         .badge { background: #eff6ff; color: #1e3a8a; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; border: 1px solid #bfdbfe; }
@@ -56,7 +59,14 @@
         .contact-list li { margin-bottom: 20px; font-size: 1rem; }
         .contact-list strong { display: block; opacity: 0.7; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 3px; color: #3b82f6; }
         
-        .cta-btn { display: block; background: #3b82f6; color: white; text-align: center; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 25px; transition: background 0.3s; }
+        /* Form Styling */
+        .contact-form { margin-top: 25px; background: #f8fafc; padding: 25px; border-radius: 12px; border: 1px solid #e2e8f0; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem; color: #334155; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 0.95rem; }
+        .form-group textarea { resize: vertical; height: 100px; }
+
+        .cta-btn { display: block; background: #3b82f6; color: white; text-align: center; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 15px; border: none; width: 100%; cursor: pointer; font-size: 1rem; transition: background 0.3s; }
         .cta-btn:hover { background: #2563eb; }
         .whatsapp-btn { background: #10b981; }
         .whatsapp-btn:hover { background: #059669; }
@@ -66,7 +76,6 @@
 
 <header>
     <div class="profile-img-container">
-        <!-- Memanggil foto merah Anda -->
         <img src="foto yusa.jpeg" alt="Yusa Haidir" class="profile-img">
     </div>
     <h1>YUSA HAIDIR</h1>
@@ -75,7 +84,7 @@
 
 <div class="container">
     
-    <!-- Bagian 1: Layanan Komprehensif -->
+    <!-- Layanan -->
     <h2 class="section-title">Layanan Keuangan Profesional</h2>
     <div class="services-grid">
         <div class="service-card">
@@ -107,7 +116,7 @@
         </div>
     </div>
 
-    <!-- Bagian 2: Estimasi Tarif Jasa Terbuka -->
+    <!-- Tarif Jasa -->
     <h2 class="section-title">Estimasi Tarif Jasa</h2>
     <div class="price-grid">
         <div class="price-card">
@@ -141,18 +150,3 @@
             <div>
                 <h4>Proyek Khusus & Audit Internal</h4>
                 <div class="price-value">Rp 5.000.000<br><span>/ Proyek (Mulai Dari)</span></div>
-                <ul class="price-features">
-                    <li>✓ Pelaporan Khusus BI (DULN/KPPK)</li>
-                    <li>✓ Audit Investigasi Stok & Rekonsiliasi Aset</li>
-                    <li>✓ Setup SOP Keuangan & Struktur Costing</li>
-                    <li>✓ Layanan Keimigrasian Korporat (KITAS)</li>
-                </ul>
-            </div>
-            <a href="https://wa.me" class="cta-btn whatsapp-btn" target="_blank">Konsultasi Paket</a>
-        </div>
-    </div>
-
-    <!-- Bagian 3: Profil Rekam Jejak Ringkas & Kontak -->
-    <div class="profile-container">
-        <div class="main-box">
-            <h2 style="color:#0f172a; margin-bottom: 20px;">Kualifikasi & Jaminan Reputasi</h2>
