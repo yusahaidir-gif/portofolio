@@ -6,42 +6,55 @@
     <title>Jasa Akuntansi & Perpajakan Profesional - Yusa Haidir</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f8fafc; color: #334155; line-height: 1.6; }
+        body { background-color: #f0f4f8; color: #1e293b; line-height: 1.6; }
         
-        /* Hero Section */
-        header { background: linear-gradient(135deg, #0f172a, #1e3a8a); color: white; padding: 80px 20px; text-align: center; }
-        header h1 { font-size: 2.8rem; font-weight: 700; margin-bottom: 15px; letter-spacing: -0.5px; }
-        header p { font-size: 1.3rem; opacity: 0.9; max-width: 700px; margin: 0 auto 25px auto; }
+        /* Hero Section - Hitam & Biru Corporate */
+        header { background: linear-gradient(135deg, #0f172a, #1e3a8a); color: white; padding: 70px 20px; text-align: center; }
+        
+        .profile-img-container { margin-bottom: 20px; }
+        .profile-img { width: 140px; height: 140px; border-radius: 50%; border: 4px solid #3b82f6; object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.3); background-color: #eaeaea; }
+        
+        header h1 { font-size: 2.6rem; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.5px; }
+        header p { font-size: 1.25rem; opacity: 0.9; max-width: 800px; margin: 0 auto; color: #93c5fd; }
         
         .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
         
-        /* Section styling */
-        .section-title { text-align: center; color: #1e3a8a; margin-bottom: 35px; font-size: 2rem; position: relative; padding-bottom: 10px; }
+        .section-title { text-align: center; color: #1e3a8a; margin-bottom: 35px; font-size: 2rem; position: relative; padding-bottom: 10px; font-weight: 700; }
         .section-title::after { content: ''; width: 60px; height: 4px; background: #3b82f6; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
         
-        /* Service Cards */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 50px; }
-        .service-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03); border: 1px solid #e2e8f0; transition: transform 0.3s; }
+        /* Layanan Cards */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 60px; }
+        .service-card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-top: 5px solid #1e3a8a; transition: transform 0.3s; }
         .service-card:hover { transform: translateY(-5px); }
-        .service-card h3 { color: #0f172a; margin-bottom: 15px; font-size: 1.3rem; display: flex; align-items: center; gap: 10px; }
-        .service-card ul { list-style-position: inside; color: #64748b; font-size: 0.95rem; }
-        .service-card li { margin-bottom: 8px; }
+        .service-card h3 { color: #0f172a; margin-bottom: 15px; font-size: 1.3rem; }
+        .service-card ul { list-style-position: inside; color: #475569; font-size: 0.95rem; }
+        .service-card li { margin-bottom: 8px; list-style-type: square; }
 
-        /* Profile & Experience Box */
+        /* Struktur Tarif Harga */
+        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px; }
+        .price-card { background: white; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; text-align: center; padding: 30px 20px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; }
+        .price-card.featured { border: 2px solid #3b82f6; }
+        .price-card.featured .ribbon { background: #3b82f6; color: white; transform: rotate(45deg); position: absolute; right: -30px; top: 15px; width: 120px; font-size: 0.75rem; font-weight: bold; padding: 3px 0; }
+        .price-card h4 { font-size: 1.25rem; color: #0f172a; margin-bottom: 10px; }
+        .price-value { font-size: 1.75rem; font-weight: 700; color: #1e3a8a; margin-bottom: 15px; }
+        .price-value span { font-size: 0.9rem; color: #64748b; font-weight: normal; }
+        .price-features { list-style: none; text-align: left; color: #475569; font-size: 0.9rem; margin-bottom: 25px; }
+        .price-features li { margin-bottom: 10px; border-bottom: 1px dashed #f1f5f9; padding-bottom: 5px; }
+
+        /* Kombinasi Profil & Kontak */
         .profile-container { display: grid; grid-template-columns: 1fr; gap: 30px; margin-bottom: 50px; }
         @media (min-width: 768px) { .profile-container { grid-template-columns: 2fr 1fr; } }
         .main-box { background: white; padding: 35px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
-        .side-box { background: #1e3a8a; color: white; padding: 35px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .side-box { background: #0f172a; color: white; padding: 35px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
         
         .main-box p { margin-bottom: 15px; font-size: 1.05rem; }
         .badge-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-        .badge { background: #eff6ff; color: #1e3a8a; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+        .badge { background: #eff6ff; color: #1e3a8a; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; border: 1px solid #bfdbfe; }
         
-        /* Contact Section */
         .side-box h3 { border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px; margin-bottom: 20px; }
         .contact-list { list-style: none; }
         .contact-list li { margin-bottom: 20px; font-size: 1rem; }
-        .contact-list strong { display: block; opacity: 0.7; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 3px; }
+        .contact-list strong { display: block; opacity: 0.7; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 3px; color: #3b82f6; }
         
         .cta-btn { display: block; background: #3b82f6; color: white; text-align: center; padding: 14px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 25px; transition: background 0.3s; }
         .cta-btn:hover { background: #2563eb; }
@@ -52,92 +65,94 @@
 <body>
 
 <header>
-    <h1>Jasa Akuntansi, Pajak & Audit Perorangan</h1>
-    <p>Solusi pembukuan, kepatuhan pajak, dan pelaporan keuangan tepercaya untuk bisnis dan perusahaan Anda.</p>
+    <div class="profile-img-container">
+        <!-- Memanggil foto merah Anda yang diunggah sebelumnya -->
+        <img src="foto yusa.jpeg" alt="Yusa Haidir" class="profile-img">
+    </div>
+    <h1>YUSA HAIDIR</h1>
+    <p>Penyedia Jasa Profesional Independen - Akuntansi, Pajak, Pajak Payroll & Audit Korporat</p>
 </header>
 
 <div class="container">
     
-    <!-- Layanan Kami -->
-    <h2 class="section-title">Layanan yang Ditawarkan</h2>
+    <!-- Bagian 1: Layanan Komprehensif -->
+    <h2 class="section-title">Layanan Keuangan Profesional</h2>
     <div class="services-grid">
-        
         <div class="service-card">
             <h3>📊 Akuntansi & Pembukuan</h3>
             <ul>
-                <li>Penyusunan Laporan Keuangan Bulanan & Tahunan (P/L & B/S) sesuai standar IFRS [2].</li>
-                <li>Rekonsiliasi Bank bulanan dan jadwal neraca laporan [2].</li>
-                <li>Manajemen & Kontrol Inventaris/Stok barang [2].</li>
-                <li>Perhitungan Biaya Produksi (COGM & COGS) [2].</li>
+                <li>Penyusunan laporan bulanan/tahunan (P/L & B/S) berbasis standar IFRS [1].</li>
+                <li>Rekonsiliasi perbankan rutin serta manajemen Buku Besar terintegrasi [1].</li>
+                <li>Penyusunan estimasi Anggaran Tahunan dan Forecast triwulanan proyek bisnis [1].</li>
+                <li>Perhitungan akurat Biaya Produksi (COGM & COGS) bagi industri manufaktur [1].</li>
             </ul>
         </div>
-
         <div class="service-card">
-            <h3>⚖️ Kepatuhan & Pelaporan Pajak</h3>
+            <h3>⚖️ Kepatuhan & Manajemen Pajak</h3>
             <ul>
-                <li>Perhitungan dan pelaporan SPT bulanan serta tahunan [2].</li>
-                <li>Pengelolaan Dokumen PPN (VAT In & Out), PPh Badan (CIT), dan PPh Potput (WHT) [2].</li>
-                <li>Perhitungan Payroll, skala gaji, PPh Pasal 21, dan BPJS Karyawan [2].</li>
-                <li>Pelaporan formal DULN dan KPPK ke Bank Indonesia [2].</li>
+                <li>Pelaporan formal berkala untuk PPN (VAT), PPh Badan (CIT), dan PPh Potput (WHT) [1].</li>
+                <li>Penghitungan sistem Payroll, pelaporan PPh 21, dan jaminan ketenagakerjaan/kesehatan (BPJS) [1].</li>
+                <li>Pelaporan instansi keuangan khusus (Laporan DULN & KPPK) kepada Bank Indonesia [1].</li>
+                <li>Manajemen kepatuhan perizinan tinggal tenaga kerja asing (RPTKA, KITAS, SKTT) [1].</li>
             </ul>
         </div>
-
         <div class="service-card">
-            <h3>🔍 Audit & Manajemen Internal</h3>
+            <h3>🔍 Kontrol Internal & Pendampingan Audit</h3>
             <ul>
-                <li>Jasa Audit laporan internal perorangan (Part-time Auditor) [2].</li>
-                <li>Evaluasi harga jual produk berdasarkan struktur biaya [2].</li>
-                <li>Penyusunan rencana anggaran tahunan (Annual Budget) & perkiraan kuartal [2].</li>
-                <li>Implementasi sistem penjaminan mutu dan kontrol internal perusahaan [2].</li>
+                <li>Inspeksi kepatuhan pembukuan berkala bertindak sebagai Part-time Internal Auditor [1].</li>
+                <li>Penilaian struktur pembiayaan untuk penentuan standardisasi harga jual produk [1].</li>
+                <li>Evaluasi manajemen inventarisasi stok gudang untuk mengeliminasi variansi rugi [1].</li>
+                <li>Implementasi sistem penjaminan kualitas dan pengendalian manajemen mutu (ISO 9001) [1].</li>
             </ul>
         </div>
-        
     </div>
 
-    <!-- Tentang Konsultan -->
-    <div class="profile-container">
-        
-        <div class="main-box">
-            <h2 style="color:#0f172a; margin-bottom: 20px;">Mengapa Memilih Kami?</h2>
-            <p>Dipimpin langsung oleh <strong>Yusa Haidir</strong>, seorang lulusan Manajemen Keuangan Universitas Mercu Buana Jakarta (Lulus 2003). Kami menawarkan pengalaman profesional lebih dari <strong>20 tahun</strong> di berbagai perusahaan multinasional besar (Jepang & Amerika) [2].</p>
-            <p>Berpengalaman menangani manajemen keuangan korporat di PT. Ishiguro Indonesia, PT. Meiwa Mold Indonesia, PT. Weatherford Indonesia (Perusahaan AS), dan PT. Kyowa Indonesia. Kami siap membantu mengoptimalkan stabilitas kondisi keuangan dan memastikan kepatuhan hukum bisnis Anda [2].</p>
-            
-            <div class="badge-container">
-                <span class="badge">Sertifikasi Brevet A & B (IAI)</span>
-                <span class="badge">Sertifikasi Akselerasi PPh Ps. 21</span>
-                <span class="badge">Pemahaman UU PPN Terbaru</span>
-                <span class="badge">Keahlian Sistem ERP (SAP/Oracle/Accurate)</span>
-                <span class="badge">Pemahaman Regulasi HSE & ISO</span>
+    <!-- Bagian 2: Estimasi Tarif Jasa Terbuka -->
+    <h2 class="section-title">Estimasi Tarif Jasa</h2>
+    <div class="price-grid">
+        <div class="price-card">
+            <div>
+                <h4>Paket Pembukuan UMKM</h4>
+                <div class="price-value">Hubungi Kami <br><span>Kompetitif & Fleksibel</span></div>
+                <ul class="price-features">
+                    <li>✓ Penyusunan Buku Besar Teratur</li>
+                    <li>✓ Laporan Neraca & Rugi Laba Bulanan [1]</li>
+                    <li>✓ Rekonsiliasi Rekening Koran Bank [1]</li>
+                    <li>✓ Cocok untuk Pelaku Usaha Menengah</li>
+                </ul>
             </div>
+            <a href="https://wa.me" class="cta-btn whatsapp-btn" target="_blank">Konsultasi Paket</a>
         </div>
-
-        <div class="side-box">
-            <h3>Konsultasi Sekarang</h3>
-            <ul class="contact-list">
-                <li>
-                    <strong>Nama Konsultan</strong>
-                    Yusa Haidir
-                </li>
-                <li>
-                    <strong>Nomor Handphone / WA</strong>
-                    08212656882
-                </li>
-                <li>
-                    <strong>Alamat Email</strong>
-                    yusahaidir@gmail.com
-                </li>
-                <li>
-                    <strong>Wilayah Operasional</strong>
-                    Cikarang, Bekasi, Jakarta, dan Sekitarnya
-                </li>
-            </ul>
-            <a href="https://wa.me" class="cta-btn whatsapp-btn" target="_blank">💬 Hubungi via WhatsApp</a>
-            <a href="mailto:yusahaidir@gmail.com" class="cta-btn">✉️ Kirim Email Penawaran</a>
+        <div class="price-card featured">
+            <div class="ribbon">Terpopuler</div>
+            <div>
+                <h4>Layanan Pajak & Payroll Bulanan</h4>
+                <div class="price-value">Sesuai Volume<br><span>Negosiasi Terbuka</span></div>
+                <ul class="price-features">
+                    <li>✓ Perhitungan & Pelaporan PPN (Faktur Pajak) [1]</li>
+                    <li>✓ Perhitungan Payroll & SPT PPh 21 Karyawan [1]</li>
+                    <li>✓ Penghitungan Premi BPJS Terintegrasi [1]</li>
+                    <li>✓ Pendampingan Kepatuhan Pajak Badan [1]</li>
+                </ul>
+            </div>
+            <a href="https://wa.me" class="cta-btn whatsapp-btn" target="_blank">Konsultasi Paket</a>
         </div>
-
+        <div class="price-card">
+            <div>
+                <h4>Proyek Khusus & Audit Internal</h4>
+                <div class="price-value">Sesuai Kontrak<br><span>Berbasis Perjanjian Kerja</span></div>
+                <ul class="price-features">
+                    <li>✓ Pelaporan Khusus BI (DULN/KPPK) [1]</li>
+                    <li>✓ Audit Investigasi Stok & Rekonsiliasi Aset [1]</li>
+                    <li>✓ Setup SOP Keuangan & Struktur Costing [1]</li>
+                    <li>✓ Layanan Keimigrasian Korporat (KITAS) [1]</li>
+                </ul>
+            </div>
+            <a href="https://wa.me" class="cta-btn whatsapp-btn" target="_blank">Konsultasi Paket</a>
+        </div>
     </div>
 
-</div>
-
-</body>
-</html>
+    <!-- Bagian 3: Profil Rekam Jejak Ringkas & Kontak -->
+    <div class="profile-container">
+        <div class="main-box">
+            <h2 style="color:#0f172a; margin-bottom: 20px;">Kualifikasi & Jaminan Reputasi</h2>
